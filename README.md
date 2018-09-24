@@ -51,5 +51,5 @@ Para proceder a instalar el sistema, nos aseguramos de tener "vacía" nuestra ta
 **Procedimiento en Windows**
 
 1. Insertamos nuestra tarjeta SD en el ordenador y procedemos a descargar el siguiente programa [SD Card Formating]().
-2. 
+2. ![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 
