@@ -21,12 +21,14 @@ Entre los Add-ons y características que CosmOS posee, encontramos:
 - Reproductor de música, video, radio y TV, en diversos formatos
 - Compatibilidad con múltiples servicios de IPTV
 - Cast desde Smartphones ([YouTube]() y [DailyMotion]()), además de contenido local como música, videos e imágenes
+- Cast desde sitios web. Facilidad de transmitir cualquier web video gracias a [Yatse]() y [Web Video Cast]()
 - Transferencia de archivos mediante un cliente Samba
 
 Algunas modificaciones de la versión oficial de [LibreELEC]() gracias a [Milhouse]()
 
-- Inclusión de [Kodi - Media Center]() v18, Leila
+- Inclusión de [Kodi - Media Center v18](), Leia
 - Compatibilidad con Inputstream y Widevine
+- Puede consultar más información sobre cambios recientes y nuevos lanzamientos en el siguiente tema [LibreELEC Testbuilds for RaspberryPi (Kodi 18.0)](https://forum.kodi.tv/showthread.php?tid=298461)
 
 # Antes de Empezar
 
@@ -46,14 +48,65 @@ Para la construcción de tu propio Media Center con [CosmOS](), es necesario la 
 
 # Instalación del Sistema
 
-Para proceder a instalar el sistema, nos aseguramos de tener "vacía" nuestra tarjeta SD. Ésto lo logramos mediante dos métodos disponibles para Windows y Linux. Se recomienda la utilización de Windows para este paso.
+Para proceder a instalar el sistema, nos aseguramos de tener "vacía" nuestra tarjeta SD. Sin embargo, en caso de no estarlo, al momento de grabar nuestra imagen `CosmOS-rpi23-1.img` en nuestra tarjeta SD, el programa lo hará automáticamente. Para la comodidad del usuario, el procedimiento lo realizaremos en un ordenador con Windows. Las instrucciones en Linux, se dejarán comentadas al final de este apartado.
 
 **Procedimiento en Windows**
 
-1. Insertamos nuestra tarjeta SD en el ordenador y procedemos a descargar el siguiente programa [SD Card Formating]().
-2. Formateamos la unidad mediante "Quick Format".
+1. Descargamos la siguiente utilidad [SD Imager](https://sourceforge.net/projects/sdimager/). 
+2. Insertamos nuestra SD Card, y la seleccionamos dentro del programa.
+3. En el apartado **Image File** seleccionamos la ruta del fichero `CosmOS-rpi23-1.img`, el cual lo descargaremos de la sección **Releases** del presente sitio. Para la última versión, presiona el siguiente enlace [last versionn]().
+4. Presionamos el botón **Write** y esperamos el tiempo estimado por el programa.
+5. Una vez finalizado, retiramos la SD Card del ordenador y la colocamos en nuestra **Raspberry Pi 3**.
+6. Continuamos la instalación en nuestra Raspberry Pi. 
 
 **Procedimiento en Linux**
+
+Puedes obtener las instrucciones detalladas presionando el siguiente enlace [Installing operating system images on Linux](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md).
+
+# Conexiones
+
+Usaremos la herramienta de **LibreELEC** para configurar conexiones y dispositivos de CosmOS.
+
+![](https://wiki.libreelec.tv/_media/wiki/le-settings-system.png?w=400&tok=17b2a2)
+
+**Conectado mandos inalámbricos, BLuetooth o controles vía HDMI**
+
+Si posees un mando compatible, es recomendado conectarlo y configurarlo para navegar por la interfaz. Es posible que necesite un teclado USB para configurar dicha entrada. 
+
+1. En caso de poseer un televisor con la tecnología CEC, puedes controlar CosmOS con el mando del mismo dispositivo. Para saber si tu televisor posee esta característica puedes revisar el siguiente enlace [CONTROLA TU KODI CON TU MANDO DE TV HDMI CEC](https://www.kodimania.com/viewtopic.php?t=70).
+
+2. Para configurar un mando Bluetooth, deberás seguir las instrucciones de tu control. Con la ayuda de un teclado, diríjase a la sección **Apps** de la interfaz (ícono de engranaje). Abra presionando <kbd>ENTER</kbd> en un teclado/mando CEC. Al abrir observarás un `Addon-Splash`, para continuar presiona el botón <kbd>BACK</kbd>. Dentro de la configuración diríjase a `Bluetooth -> Nombre del dispositivo -> Pair`. Al finanizar deberás seguir los siguientes pasos para mapear el mando [Configurando Controles](https://kodi.wiki/view/HOW-TO:Configure_controllers).
+
+3. En caso de tener un mando o gamepad wireless USB, deberás conectarlo y mapearlo siguiente las instrucciones de [Configurando Controles](https://kodi.wiki/view/HOW-TO:Configure_controllers).
+
+**Conectado un mando desde Android**
+
+Puedes descargar mandos a distancia disponibles para Android. En caso de tener otro sistema, deberás buscar en su respectiva **Tienda de Aplicaciones**. En esta configuración, usaremos dos aplicaciones muy populares para controlar nuestro sistema.
+
+
+|Mando|Descripción|
+|-----|---------------|
+|Kore,|Mando oficial para Kodi con todas las funciones del sistema|
+|Yatse,|Mando con características de transmisión de contenido local y web hacia el media-center|
+
+
+
+El usuario podrá escoger una de las aplicaciones y para conectarla deberá seguir los respectivos pasos de cada mando.
+
+**Conectando una red wifi o cableada**
+
+Para poder disfrutar de todas las funciones de CosmOS, es necesario una conexión a internet. La configuración rápida de **LibreELEC** nos ayudará en el proceso.
+
+1. En caso de poseer una conexión cableda, colócala el el puerto `LAN` de la Raspberry Pi. Listo.
+2. Para conectarse a una red inalámbrica, diríjase a la sección **Apps** de la interfaz y localice el ícono del engranaje. 
+3. Abra presionando <kbd>ENTER</kbd> en un teclado/mando CEC o <kbd>A</kbd> en joysticks (Previamente configurado para Inalámbrico y Bluetooth).
+4. Al abrir observarás un `Addon-Splash`, para continuar presiona el botón <kbd>Return</kbd>, <kbd>BACK</kbd> o <kbd>B</kbd> dependiendo del dispositivo.
+5. Dentro de la configuración diríjase a `Connections -> Nombre de la red -> Conect`.
+6. Pedirá la autentificación de la red, asegúrese de escribir correctamente. En caso de errores, puede volver a intentarlo.
+7. Verifique que el estado de la red se encuentre en `ready`.
+8. Para evitar problemas con direcciones IP de otros dispositivos y garantizar el funcionamiento del contro remoto en Android, se ha dejado con una dirección estática (DHCP) en `192.168.1.16`. Puedes cambiarla en el mismo apartado.
+9. Tu dispositivo está listo para reproducir contenido Online.
+  
 
 
 
