@@ -79,7 +79,8 @@ Si posees un mando compatible, es recomendado conectarlo y configurarlo para nav
 
 3. En caso de tener un mando o gamepad wireless USB, deberás conectarlo y mapearlo siguiente las instrucciones de [Configurando Controles](https://kodi.wiki/view/HOW-TO:Configure_controllers).
 
-**Conectado un mando desde Android**
+
+**Conectado un mando desde Android/IOS/Windows**
 
 Puedes descargar mandos a distancia disponibles para Android. En caso de tener otro sistema, deberás buscar en su respectiva **Tienda de Aplicaciones**. En esta configuración, usaremos dos aplicaciones muy populares para controlar nuestro sistema.
 
@@ -107,6 +108,26 @@ Para poder disfrutar de todas las funciones de CosmOS, es necesario una conexió
 8. Para evitar problemas con direcciones IP de otros dispositivos y garantizar el funcionamiento del contro remoto en Android, se ha dejado con una dirección estática (DHCP) en `192.168.1.16`. Puedes cambiarla en el mismo apartado.
 9. Tu dispositivo está listo para reproducir contenido Online.
   
+**Conectando un dispositivo a CosmOS mediante SAMBA para transferir archivos**
 
+**Accediendo a Kodi mediante la Interfaz Web**
 
+# Aplicaciones (Addons)
 
+**Abriendo un Addon previamente instalado**
+**Configurando Addons**
+**Instalando nuevos Addons**
+
+# Streaming y Casting
+
+# Consola Retro
+
+# Biblioteca de Películas, Series y Música
+
+# Ambientación
+
+# Expandiendo funciones
+
+# LibreELEC Services
+
+# Copias de Seguridad
