@@ -34,7 +34,7 @@ Algunas modificaciones de la versión oficial de [LibreELEC]() gracias a [Milhou
 
 Para la construcción de tu propio Media Center con [CosmOS](), es necesario la obtención de los siguientes materiales:
 
-- [Raspberry Pi 3]
+- [Raspberry Pi 3]()
 - Adaptador de corriente a 5v , 2.5A
 - Tarjeta MicroSD de 8gb (mínimo) clase 10 (Garantiza la lectura y escritura de al menos 10mb/s)
 - Ventilador de 5V 
@@ -73,7 +73,7 @@ Usaremos la herramienta de **LibreELEC** para configurar conexiones y dispositiv
 
 Si posees un mando compatible, es recomendado conectarlo y configurarlo para navegar por la interfaz. Es posible que necesite un teclado USB para configurar dicha entrada. 
 
-1. En caso de poseer un televisor con la tecnología CEC, puedes controlar CosmOS con el mando del mismo dispositivo. Para saber si tu televisor posee esta característica puedes revisar el siguiente enlace [CONTROLA TU KODI CON TU MANDO DE TV HDMI CEC](https://www.kodimania.com/viewtopic.php?t=70).
+1. En caso de poseer un televisor con la tecnología CEC, puedes controlar CosmOS con el mando del mismo dispositivo. Para saber si tu televisor posee esta característica puedes revisar el siguiente enlace [Control Kodi con mando de TV HDMI CEC](https://www.kodimania.com/viewtopic.php?t=70).
 
 2. Para configurar un mando Bluetooth, deberás seguir las instrucciones de tu control. Con la ayuda de un teclado, diríjase a la sección **Apps** de la interfaz (ícono de engranaje). Abra presionando <kbd>ENTER</kbd> en un teclado/mando CEC. Al abrir observarás un `Addon-Splash`, para continuar presiona el botón <kbd>BACK</kbd>. Dentro de la configuración diríjase a `Bluetooth -> Nombre del dispositivo -> Pair`. Al finanizar deberás seguir los siguientes pasos para mapear el mando [Configurando Controles](https://kodi.wiki/view/HOW-TO:Configure_controllers).
 
@@ -87,8 +87,8 @@ Puedes descargar mandos a distancia disponibles para Android. En caso de tener o
 
 |Mando|Descripción|
 |-----|---------------|
-|Kore,|Mando oficial para Kodi con todas las funciones del sistema|
-|Yatse,|Mando con características de transmisión de contenido local y web hacia el media-center|
+|Kore|Mando oficial para Kodi con todas las funciones del sistema|
+|Yatse|Mando con características de transmisión de contenido local y web hacia el media-center|
 
 
 
@@ -110,11 +110,69 @@ Para poder disfrutar de todas las funciones de CosmOS, es necesario una conexió
   
 **Conectando un dispositivo a CosmOS mediante SAMBA para transferir archivos**
 
+CosmOS tiene activado el cliente [SAMBA]() por defecto, así podrás transferir y compartir los archivos del sistema a cualquier dispositivo compatible. Las opciones de configuración están disponibles en la ruta `Services -> Samba`. 
+
+|Opción|Descripción|
+|-----|---------------|
+|Enable Samba|Activa o desactiva el servidor Samba|
+|User Samba Password Authentication|Activa o desactiva la protección del servidor con una contraseña|
+|Auto-Share External Drives|Activa o desactiva la compartición de discos externos conectados al sistema|
+
+Para transferir archivos a CosmOS se recomiendan los siguientes procedimientos.
+
+**NOTA:** Si se ha modificado la dirección IP estática de CosmOS, deberá reemplazar los valores correspondientes. Revise el literal octavo del apartado **Conectando una red wifi o cableada**
+
+|Plataforma|Procedimiento|
+|-----|---------------|
+|Windows|En el explorador de archivos ingrese la siguiente dirección `\\192.168.1.16\`|
+|Sistemas basados en Ubuntu|En el explorador de archivos ingrese la siguiente dirección `smb://192.168.1.16/`|
+|Android|Descarga la aplicación [ES File Explorer]() y accede en la categoría **LAN**|
+
+Para más información de configuración ingrese al siguiente enlace [Services LibreELEC](https://wiki.libreelec.tv/libreelec_settings#tab__services). Si desea conectar a equipos con MacOS revise [MacOS Samba](https://wiki.libreelec.tv/accessing_libreelec#tab__sambasmb).
+
 **Accediendo a Kodi mediante la Interfaz Web**
 
-# Aplicaciones (Addons)
+Podrás observar la reproducción, controlar el contenido y verificar estados de Kodi accediendo a la **Interfaz Web**. Dentro de un navegador web accede a la siguiente dirección:
+
+**NOTA:** Si se ha modificado la dirección IP estática de CosmOS, deberá reemplazar los valores correspondientes. Revise el literal octavo del apartado **Conectando una red wifi o cableada**
+
+```
+
+http://192.168.1.16:8080
+
+```
+
+Para más información revise [Web Interface](https://kodi.wiki/view/Web_interface).
+
+# Aplicaciones (Add-ons)
+
+CosmOS viene configurado con addons de las aplicaciones más populares multiplataformas. Los addons disponibles en CosmOS se encuentran en la siguiente tabla.
+
+|Applicación|Descripción|
+|-----|---------------|
+|[Netflix](https://github.com/asciidisco/plugin.video.netflix)|Disfruta del contenido de Netflix de forma nativa en Kodi|
+|[Amazon Prime Video](https://github.com/Sandmann79/xbmc/tree/master/plugin.video.amazon-test)|Disfruta del contenido de Amazon Prime Video disponible en diversos países|
+|[Spotify](https://github.com/kodi-community-addons/plugin.audio.spotify)|Explora reproduce y transmite contenido de Spotify|
+|[Tidal](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Soundcloud](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Twitch](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[YouTube](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Vimeo](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Dailymotion](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Retro Consola](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Plex](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[CosmOS Manual](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Settings](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Crackle](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[CosmOS Cast](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Retro Consola](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
 
 **Abriendo un Addon previamente instalado**
+
+CosmOS utiliza un **script** simple que lanza los addons con un **splash**, es decir que mostrará una breve imagen en pantalla completa de cada aplicación. Para forzar la apertura del addon presiona el botón <kbd>Return</kbd>, <kbd>BACK</kbd> o <kbd>B</kbd> dependiendo del dispositivo (si el **splash** no desaparece).
+
+ En caso de continuar con el problema, puedes obtener soporte y/o actualizaciones creando un tema en la sección **issues**.
+
 **Configurando Addons**
 **Instalando nuevos Addons**
 
