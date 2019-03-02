@@ -1,5 +1,5 @@
 # Disclaimer
-El propósito del siguiente proyecto es enseñar a la comunidad la configuración de un MediaCenter para Raspberry 2 y 3. El sistema propuesto ha sido configurado con el fin de facilitar la instalación de recursos multimedia, así como herramientas de streaming, video juegos y programas listos para utilizar. Mediante una serie librerías y recursos de código libre, se pretende mostrar a la comunidad la facilidad de construcción de un MediaCenter inteligente. Al mismo tiempo se recopilan los mejores proyectos para Raspberry y mostrando el trabajo de los desarrolladores para integrarlos en un sistema fácil de instalar y utilizar. **El proyecto no pretende incentivar a la piratería ni a la comercialización de contenido ilegal. Se limita al aprendizaje y utilización de recursos informáticos**.
+El propósito del siguiente proyecto es enseñar a la comunidad la configuración de un MediaCenter para Raspberry Pi 2/3. El sistema propuesto ha sido configurado con el fin de facilitar la instalación de recursos multimedia, así como herramientas de streaming, video juegos y programas listos para utilizar. Mediante una serie librerías y recursos de código libre, se pretende mostrar a la comunidad la facilidad de construcción de un MediaCenter inteligente. Al mismo tiempo se recopilan los mejores proyectos para Raspberry y mostrando el trabajo de los desarrolladores para integrarlos en un sistema fácil de instalar y utilizar. **El proyecto no pretende incentivar a la piratería ni a la comercialización de contenido ilegal. Se limita al aprendizaje y utilización de recursos informáticos**.
 
 # Introducción
 CosmOS, cuyo nombre deriva de la idea "del todo", está compuesto de varios programas y addons que ofrecen al usuario "todo el entretenimiento". CosmOS está basado en [LibreELEC](http://libreelec.wiki/), un sistema que, en sí, ya ofrece herramientas de entretenimiento. Sin embargo, en esta modificación, se provee de Add-ons configurados y listos para utilizar en una Raspberry. Agradezco al proyecto por ofrecer utilidades como Add-ons de Conectividad Wifi y Bluetooh, y servicios de configuración. CosmOS, no es nada en especial, sólo una recopilación de [Software Libre](https://www.gnu.org/philosophy/free-sw.es.html) funcionando para el completo entretenimiento.
@@ -56,7 +56,7 @@ Para proceder a instalar el sistema, nos aseguramos de tener "vacía" nuestra ta
 2. Insertamos nuestra SD Card, y la seleccionamos dentro del programa.
 3. En el apartado **Image File** seleccionamos la ruta del fichero `CosmOS-rpi23-1.img`, el cual lo descargaremos de la sección **Releases** del presente sitio. Para la última versión, presiona el siguiente enlace [last versionn]().
 4. Presionamos el botón **Write** y esperamos el tiempo estimado por el programa.
-5. Una vez finalizado, retiramos la SD Card del ordenador y la colocamos en nuestra **Raspberry Pi 3**.
+5. Una vez finalizado, retiramos la SD Card del ordenador y la colocamos en nuestra **Raspberry Pi 2/3**.
 6. Continuamos la instalación en nuestra Raspberry Pi. 
 
 **Procedimiento en Linux**
@@ -69,11 +69,11 @@ Usaremos la herramienta de **LibreELEC** para configurar conexiones y dispositiv
 
 ![](https://wiki.libreelec.tv/_media/wiki/le-settings-system.png?w=400&tok=17b2a2)
 
-**Conectado mandos inalámbricos, BLuetooth o controles vía HDMI**
+**Conectado mandos inalámbricos, Bluetooth o controles vía HDMI**
 
 Si posees un mando compatible, es recomendado conectarlo y configurarlo para navegar por la interfaz. Es posible que necesite un teclado USB para configurar dicha entrada. 
 
-1. En caso de poseer un televisor con la tecnología CEC, puedes controlar CosmOS con el mando del mismo dispositivo. Para saber si tu televisor posee esta característica puedes revisar el siguiente enlace [Control Kodi con mando de TV HDMI CEC](https://www.kodimania.com/viewtopic.php?t=70).
+1. En caso de poseer un televisor con la tecnología CEC, puedes controlar CosmOS con el mando del mismo dispositivo. Para saber si tu televisor posee esta característica puedes revisar el siguiente enlace [Controlar Kodi con mando de TV HDMI CEC](https://www.kodimania.com/viewtopic.php?t=70).
 
 2. Para configurar un mando Bluetooth, deberás seguir las instrucciones de tu control. Con la ayuda de un teclado, diríjase a la sección **Apps** de la interfaz (ícono de engranaje). Abra presionando <kbd>ENTER</kbd> en un teclado/mando CEC. Al abrir observarás un `Addon-Splash`, para continuar presiona el botón <kbd>BACK</kbd>. Dentro de la configuración diríjase a `Bluetooth -> Nombre del dispositivo -> Pair`. Al finanizar deberás seguir los siguientes pasos para mapear el mando [Configurando Controles](https://kodi.wiki/view/HOW-TO:Configure_controllers).
 
@@ -90,7 +90,7 @@ Puedes descargar mandos a distancia disponibles para Android. En caso de tener o
 |Kore|Mando oficial para Kodi con todas las funciones del sistema|
 |Yatse|Mando con características de transmisión de contenido local y web hacia el media-center|
 
-
+![](https://i1.wp.com/liliputing.com/wp-content/uploads/2015/05/kore.jpg?resize=631%2C500)
 
 El usuario podrá escoger una de las aplicaciones y para conectarla deberá seguir los respectivos pasos de cada mando.
 
@@ -100,12 +100,12 @@ Para poder disfrutar de todas las funciones de CosmOS, es necesario una conexió
 
 1. En caso de poseer una conexión cableda, colócala el el puerto `LAN` de la Raspberry Pi. Listo.
 2. Para conectarse a una red inalámbrica, diríjase a la sección **Apps** de la interfaz y localice el ícono del engranaje. 
-3. Abra presionando <kbd>ENTER</kbd> en un teclado/mando CEC o <kbd>A</kbd> en joysticks (Previamente configurado para Inalámbrico y Bluetooth).
+3. Abra presionando <kbd>ENTER</kbd> en un teclado/mando CEC o <kbd>A</kbd> en gamepads (Previamente configurado para Inalámbrico y Bluetooth).
 4. Al abrir observarás un `Addon-Splash`, para continuar presiona el botón <kbd>Return</kbd>, <kbd>BACK</kbd> o <kbd>B</kbd> dependiendo del dispositivo.
 5. Dentro de la configuración diríjase a `Connections -> Nombre de la red -> Conect`.
 6. Pedirá la autentificación de la red, asegúrese de escribir correctamente. En caso de errores, puede volver a intentarlo.
 7. Verifique que el estado de la red se encuentre en `ready`.
-8. Para evitar problemas con direcciones IP de otros dispositivos y garantizar el funcionamiento del contro remoto en Android, se ha dejado con una dirección estática (DHCP) en `192.168.1.16`. Puedes cambiarla en el mismo apartado.
+8. Para evitar problemas con direcciones IP de otros dispositivos y garantizar el funcionamiento del contro remoto en Android/IOS/Windows, se ha dejado con una dirección estática (DHCP) en `192.168.1.16`. Puedes cambiarla en el mismo apartado.
 9. Tu dispositivo está listo para reproducir contenido Online.
   
 **Conectando un dispositivo a CosmOS mediante SAMBA para transferir archivos**
@@ -154,18 +154,18 @@ CosmOS viene configurado con addons de las aplicaciones más populares multiplat
 |[Amazon Prime Video](https://github.com/Sandmann79/xbmc/tree/master/plugin.video.amazon-test)|Disfruta del contenido de Amazon Prime Video disponible en diversos países|
 |[Spotify](https://github.com/kodi-community-addons/plugin.audio.spotify)|Explora reproduce y transmite contenido de Spotify|
 |[Tidal](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Soundcloud](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Twitch](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[YouTube](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Vimeo](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Dailymotion](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Retro Consola](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Plex](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[CosmOS Manual](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Settings](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Crackle](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[CosmOS Cast](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
-|[Retro Consola](https://github.com/tamland/kodi-tidal)|Reproduce música en hi-fi directamente de Tidal (antes WIMP)|
+|[Soundcloud](https://github.com/SLiX69/plugin.audio.soundcloud)|Escuchar y comparte proyectos musicales de la comunidad|
+|[Twitch](https://github.com/MrSprigster/Twitch-on-Kodi)|Reproduce streaming de videojuegos)|
+|[YouTube](https://github.com/jdf76/plugin.video.youtube)|Disfruta del contenido de YouTube el mayor sitio de video-sharing|
+|[Vimeo](https://github.com/bromix/plugin.video.vimeo)|Una red social basada en videos|
+|[Dailymotion](https://github.com/Gujal00/plugin.video.dailymotion_com)|Ve y comparte una gran cantidad de videos alrededor del mundo|
+|[Retro Consola](https://github.com/bite-your-idols/Gamestarter)|Convierte tu Raspberry en una consola retro (Powered by EmulationStation)|
+|[Plex](https://github.com/plexinc/plex-for-kodi)|Navega y reproduce el contenido de tu servidor PLEX en una interfaz amigable|
+|CosmOS Manual|Aprende cómo configurar CosmOS (Requiere conexión a internet)|
+|[Settings](https://github.com/LibreELEC/service.libreelec.settings)|Un simple lanzador de LibreELEC Settings|
+|[Crackle](https://github.com/eracknaphobia/plugin.video.crackle)|Películas y series gratuitas desde Crackle a Sony Network|
+|CosmOS Cast|Conoce cómo transmitir todo tipo de contenido local y web directamente a CosmOS|
+|[RetroArch](https://github.com/bite-your-idols/Gamestarter)|Un potente Fontend par Libretro con múltiples emuladores y configuraciones|
 
 **Abriendo un Addon previamente instalado**
 
